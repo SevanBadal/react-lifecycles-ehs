@@ -1,4 +1,3 @@
-// react-native modules and core components
 import React, { Component } from 'react';
 import { Button, StyleSheet, View, Vibration } from 'react-native';
 // custom components
@@ -12,10 +11,8 @@ export default class App extends Component {
   constructor() {
     super();
     this.state = { toggleCounterCard: false };
-    // uncomment binding if toggle count is changed to a regular function definition
-    // this.toggleCount = this.toggleCount.bind(this);
   }
-  // toggle counter initiates the mounting and unmounting lifecycle methods for countingCard
+  // toggle counter initiates the mounting and unmounting lifecycle methods for countingCard component
   // App's render will be called after toggleCount due to change in App's View component
   toggleCount = () => {
     const startStop = this.state.toggleCounterCard ? 'Stop' : 'Start';
@@ -25,6 +22,7 @@ export default class App extends Component {
     }));
     Vibration.vibrate(1);
   }
+  // let's inspect ./components/countingCard.js to see what happens after render is called by App
   render() {
     console.log('App: Render');
     const btnColor = !this.state.toggleCounterCard ? '#A3BE8C' : '#D08770';

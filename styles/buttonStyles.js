@@ -6,7 +6,7 @@ const btnStyles = StyleSheet.create({
     },
     buttonContainer: {
         borderRadius: 4,
-        width: '40%',
+        width: 150,
         fontSize: 24,
         paddingVertical: 8,
         paddingHorizontal: 12,

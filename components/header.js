@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 // custom styles
 import headerStyles from '../styles/headerStyles';
+
 export default class Header extends Component {
     render() {
         return (
