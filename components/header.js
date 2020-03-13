@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 // custom styles
 import headerStyles from '../styles/headerStyles';
+import nordColors from '../Constants/nordColors';
 
 export default class Header extends Component {
     render() {
@@ -12,9 +13,10 @@ export default class Header extends Component {
         );
     }
 }
+
 const styles = StyleSheet.create({
     text: {
-        color: '#ECEFF4',
+        color: nordColors.snowStormLight,
         fontSize: 24,
     }
 });

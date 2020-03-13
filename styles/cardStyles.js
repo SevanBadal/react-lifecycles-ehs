@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-
+import nordColors from '../Constants/nordColors';
 const cardStyles = StyleSheet.create({
     Card: {
         borderTopEndRadius: 100,
@@ -11,9 +11,9 @@ const cardStyles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         padding: 32,
-        backgroundColor: '#8FBCBB',
+        backgroundColor: nordColors.frostGreen,
         // ios shadow
-        shadowColor: 'black',
+        shadowColor: nordColors.polarNightDarker,
         shadowOffset: { width: 12, height: 10, },
         shadowOpacity: 0.15,
         shadowRadius: 6,
@@ -23,7 +23,7 @@ const cardStyles = StyleSheet.create({
     closedCard: {
         width: '10%',
         height: 10,
-        backgroundColor: '#3B4252',
+        backgroundColor: nordColors.polarNightDark,
     },
     cardContainer: {
         alignItems: "center",
