@@ -6,26 +6,26 @@ import CountingCard from './components/countingCard';
 // custom styles
 import cardStyles from './styles/cardStyles';
 import buttonStyles from './styles/buttonStyles';
+import nordColors from './Constants/nordColors';
 
 export default class App extends Component {
-  constructor() {
-    super();
-    this.state = { toggleCounterCard: false };
-  }
-  // toggle counter initiates the mounting and unmounting lifecycle methods for countingCard component
+
+  state = { toggleCounterCard: false };
+
+  // toggleCount initiates the mounting and unmounting lifecycle methods for countingCard component
   // App's render will be called after toggleCount due to change in App's View component
+  // Additional notes: binding functions to component instance: https://reactjs.org/docs/faq-functions.html
   toggleCount = () => {
     const startStop = this.state.toggleCounterCard ? 'Stop' : 'Start';
     console.log(`Toggle Count: ${startStop} Counting!`)
-    this.setState(state => ({
-      toggleCounterCard: !state.toggleCounterCard,
-    }));
+    this.setState(state => ({ toggleCounterCard: !state.toggleCounterCard }));
     Vibration.vibrate(1);
   }
+
   // let's inspect ./components/countingCard.js to see what happens after render is called by App
   render() {
     console.log('App: Render');
-    const btnColor = !this.state.toggleCounterCard ? '#A3BE8C' : '#D08770';
+    const btnColor = !this.state.toggleCounterCard ? nordColors.auroraGreen : nordColors.auroraRed;
     return (
       <View style={styles.container} >
         <Header name="Lifecycle Demo" />
@@ -47,7 +47,7 @@ export default class App extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#ECEFF4',
+    backgroundColor: nordColors.snowStormLight,
     alignItems: 'center',
     flex: 1,
   },
